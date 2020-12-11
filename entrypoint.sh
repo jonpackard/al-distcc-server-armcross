@@ -16,4 +16,4 @@ distccd-armv5 --port=3633 --allow=$net --daemon --verbose --no-detach $append_pa
 distccd-armv6h --port=3634 --allow=$net --daemon --verbose --no-detach $append_params &
 distccd-armv7h --port=3635 --allow=$net --daemon --verbose --no-detach $append_params &
 distccd-armv8 --port=3636 --allow=$net --daemon --verbose --no-detach $append_params &
- 
+tail -f /dev/null
