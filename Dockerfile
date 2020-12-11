@@ -8,7 +8,7 @@ RUN pacman --noconfirm --needed -Syu distcc gcc clang git base-devel \
 
 RUN useradd -m build \
     && su -lc "git clone https://aur.archlinux.org/distccd-alarm.git" build \
-    && su -lc "cd /home/build/distccd-alarm && makepkg" build \
+    && su -lc "cd /home/build/distccd-alarm && makepkg --noconfirm --skippgpcheck" build \
     && pacman --noconfirm -U /home/build/distccd-alarm/*.zst \
     && rm -rf /home/build/*
 
