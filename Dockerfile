@@ -3,7 +3,7 @@ FROM archlinux:base-devel
 MAINTAINER Jon Packard <jon@packard.tech>
 #Credit to https://github.com/choldrim/docker-distcc for the entrypoint.sh script.
 
-RUN pacman --noconfirm --needed -Syu distcc gcc clang git base-devel rsync \
+RUN pacman --noconfirm --needed -Syu distcc gcc clang git base-devel rsync gperf \
     && rm -rf /var/cache/pacman/pkg/*
 
 RUN useradd -m build \
